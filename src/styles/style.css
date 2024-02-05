@@ -1,5 +1,8 @@
 @import './json-preview.css';
 @import './tool-tip.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: Inter, sans-serif;
