@@ -50,21 +50,21 @@ export const getPageRes = async (entryUrl: string) => {
 
 export const getBlogListRes = async () => {
   const response = (await Stack.getEntry({
-    contentTypeUid: "blog_post",
-    referenceFieldPath: ["author", "related_post"],
+    contentTypeUid: "trip_entry",
+    referenceFieldPath: ["guide"],
     jsonRtePath: ["body"],
   })) as any;
-  liveEdit && addEditableTags(response[0], "blog_post", true);
+  liveEdit && addEditableTags(response[0], "trip_entry", true);
   return response[0];
 };
 
 export const getBlogPostRes = async (entryUrl: string) => {
   const response = (await Stack.getEntryByUrl({
-    contentTypeUid: "blog_post",
+    contentTypeUid: "trip_entry",
     entryUrl,
-    referenceFieldPath: ["author", "related_post"],
-    jsonRtePath: ["body", "related_post.body"],
+    referenceFieldPath: ["guide"],
+    jsonRtePath: ["body"],
   })) as any;
-  liveEdit && addEditableTags(response[0], "blog_post", true);
+  liveEdit && addEditableTags(response[0], "trip_entry", true);
   return response[0];
 };

@@ -14,7 +14,7 @@ export default function SectionBucket({ section }: {section: BucketProps}) {
       <div className='member-section'>
         {section.buckets?.map((bucket) => (
           <div className='content-section' key={bucket.title_h3} {...bucket.$?.description as {}}>
-            {bucket.icon && <img {...bucket.icon.$?.url as {}} src={bucket.icon.url} alt='bucket icon' />}
+          
 
             {bucket.title_h3 ? <h3 {...bucket.$?.title_h3 as {}}>{bucket.title_h3}</h3> : ''}
             <div {...bucket.$?.description as {}}> {bucket.description && parse(bucket.description)}</div>

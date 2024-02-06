@@ -30,12 +30,10 @@ type List = {
 
 type Posts = {
   locale: string;
-  author: [];
+  guide: [];
   body: string;
-  date: string;
   featured_image: {};
   is_archived: boolean;
-  related_post: [];
   seo: {};
   url: string;
   title: string;

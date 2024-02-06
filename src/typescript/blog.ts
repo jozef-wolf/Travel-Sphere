@@ -8,8 +8,9 @@ type Object = {
     body: string;
   }
 
-type Author = {
+type Guide = {
     title: string;
+    picture: any;
   }
 
 type Article = {
@@ -45,8 +46,7 @@ export type BloglistProps = {
     url: string;
     featured_image: Image; 
     title: string;
-    date: string;
-    author: [Author];
+    guide: [Guide];
   }
 
 export type FeaturedBlogProps = {

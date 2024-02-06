@@ -20,7 +20,7 @@ export default function Blog({ entry }: Prop) {
 
   async function fetchData() {
     try {
-      const blog = await getPageRes("/blog");
+      const blog = await getPageRes("/trip");
       const result = await getBlogListRes();
       (!blog || !result) && setError(true);
 
@@ -72,7 +72,7 @@ export default function Blog({ entry }: Prop) {
             <Skeleton height={400} width={400} count={3} />
           )}
         </div>
-        <div className='blog-column-right'>
+        {/* <div className='blog-column-right'>
           {Object.keys(getEntry).length &&
           getEntry.page_components[1].widget ? (
             <h2 {...(getEntry?.page_components[1].widget.$?.title_h2 as {})}>
@@ -88,7 +88,7 @@ export default function Blog({ entry }: Prop) {
           ) : (
             <Skeleton height={600} width={300} />
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );

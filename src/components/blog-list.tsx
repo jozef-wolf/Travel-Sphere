@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
 import parse from 'html-react-parser';
 import { BloglistProps } from "../typescript/blog";
 
@@ -21,10 +20,6 @@ function BlogList({ bloglist }: {bloglist: BloglistProps}) {
             <h3>{bloglist.title}</h3>
           </Link>
         )}
-        <p>
-          {moment(bloglist.date).format('ddd, MMM D YYYY')},{' '}
-          <strong>{bloglist.author[0].title}</strong>
-        </p>
         {parse(body)}
         {bloglist.url ? (
           <Link to={bloglist.url}>

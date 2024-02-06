@@ -25,9 +25,9 @@ function App() {
         <Route path="/" element={<Layout entry={getEntry} />}>
           <Route index element={<Home entry={getPageRes} />} />
           <Route path="/:page" element={<Home entry={getPageRes} />} />
-          <Route path="/blog" element={<Blog entry={getPageRes} />} />
+          <Route path="/trip" element={<Blog entry={getPageRes} />} />
           <Route
-            path="/blog/:blogId"
+            path="/trip/:tripId"
             element={<BlogPost entry={getPageRes} />}
           />
           <Route path="/404" element={<Error />}></Route>

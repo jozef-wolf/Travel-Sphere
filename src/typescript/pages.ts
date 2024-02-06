@@ -3,12 +3,12 @@ import { Component } from "../typescript/component";
 type Object = {
     title: string;
     body: string;
-    date: string;
     related_post: [];
   }
 
-type Author = {
+type Guide = {
     title: string;
+    picture: any;
     $: Object;
   }
 
@@ -59,8 +59,7 @@ export type Post = {
     url: string;
     page_components:[];
     title: string;
-    date:string;
-    author:Author[];
+    guide:Guide[];
     body:string;
     related_post:[Blog];
     $:Object;
