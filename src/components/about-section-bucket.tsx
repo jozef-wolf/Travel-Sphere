@@ -10,8 +10,8 @@ export default function AboutSectionBucket({ sectionWithBuckets }: {sectionWithB
         {bucket.icon && <img {...bucket.icon.$?.url as {}} className='mission-icon' src={bucket.icon.url} alt='art work' />}
 
         <div className='mission-section-content'>
-          {bucket.title_h3 && <h3 className='tracking-wider text-2xl'{...bucket.$?.title_h3 as {}}>{bucket.title_h3}</h3>}
-          <div className='text-white'  {...bucket.$?.description as {}}> {bucket.description && parse(bucket.description)}</div>
+          {bucket.title_h3 && <h3 className='text-center tracking-wider text-2xl'{...bucket.$?.title_h3 as {}}>{bucket.title_h3}</h3>}
+          <div className='p-4 flex flex-col items-center'  {...bucket.$?.description as {}}> {bucket.description && parse(bucket.description)}</div>
         </div>
       </div>
     );

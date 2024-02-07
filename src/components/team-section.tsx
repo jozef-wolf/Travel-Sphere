@@ -12,11 +12,12 @@ export default function TeamSection({ ourTeam }: {ourTeam : TeamProps}) {
       <div className='team-content'>
         {ourTeam.employees?.map((employee) => {
           return (
-            <div className='team-details' key={employee.name}>
-              {employee.image && <img {...employee.image.$?.url as {}} alt={employee.image.filename} src={employee.image.url} />}
+            <div className='team-details-container' key={employee.name}>
+              {employee.image && <img className='team-details-image' {...employee.image.$?.url as {}} alt={employee.image.filename} src={employee.image.url} />}
               <div className='team-details'>
-                {employee.name && <h4 {...employee.$?.name as {}}>{employee.name}</h4>}
-                {employee.designation && <p {...employee.$?.designation as {}}>{employee.designation}</p>}
+                <div className='p-4'> {employee.name && <h4 {...employee.$?.name as {}}>{employee.name}</h4>}
+                {employee.designation && <p {...employee.$?.designation as {}}>{employee.designation}</p>}</div>
+               
               </div>
             </div>
           );

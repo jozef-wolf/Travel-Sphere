@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ArchiveRelative from "../components/archive-relative";
+// import ArchiveRelative from "../components/archive-relative";
 import RenderComponents from "../components/render-components";
 import BlogList from "../components/blog-list";
 import { getBlogListRes, getPageRes } from "../helper";
@@ -63,7 +63,7 @@ export default function Blog({ entry }: Prop) {
         <Skeleton height={400} />
       )}
       <div className='blog-container'>
-        <div className='blog-column-left'>
+        <div className='blog-column'>
           {Object.keys(getList.list).length ? (
             getList.list.map((bloglist, index) => (
               <BlogList bloglist={bloglist} key={index} />

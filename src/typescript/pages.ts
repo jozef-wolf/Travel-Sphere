@@ -4,11 +4,13 @@ type Object = {
     title: string;
     body: string;
     related_post: [];
+    bio?:any;
   }
 
 type Guide = {
     title: string;
     picture: any;
+    bio: string;
     $: Object;
   }
 
@@ -62,5 +64,6 @@ export type Post = {
     guide:Guide[];
     body:string;
     related_post:[Blog];
+    featured_image: any;
     $:Object;
   }

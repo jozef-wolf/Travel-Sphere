@@ -22,6 +22,7 @@ export type BucketProps = {
     title_h2: string;
     description: string;
     buckets: [Buckets];
+    icon?: Image;
     $: Object;
   }
 

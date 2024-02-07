@@ -22,9 +22,11 @@ function BlogList({ bloglist }: {bloglist: BloglistProps}) {
         )}
         {parse(body)}
         {bloglist.url ? (
+          <div className='m-4'>
           <Link to={bloglist.url}>
-            <span>{'Read more -->'}</span>
+            <span className='read-more'>{'Read more'}</span>
           </Link>
+          </div>
         ) : (
           ''
         )}

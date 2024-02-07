@@ -53,7 +53,6 @@ export default function BlogPost({ entry }: Prop) {
       ) : (
         <Skeleton height={400} />
       )}
-
       <div className="blog-container">
         <article className="blog-detail">
           {post.title ? (
@@ -66,22 +65,29 @@ export default function BlogPost({ entry }: Prop) {
           {post.guide ? (
             <div className="flex flex-row">
               <div
-                className="flex flex-row items-center p-4"
+                className="flex flex-col items-center bio-container"
                 {...(post.guide[0].$?.title as {})}
-              >
-                <p className="p-4 italic font-bold">{post.guide[0].title}</p>{" "}
-                <div className="w-14">
-                  <img src={post.guide[0].picture.url}></img>
-                </div>
+              ><div className="w-14">
+              <img src={post.guide[0].picture.url}></img>
+            </div>
+                <p className="italic font-bold">{post.guide[0].title}</p>{" "}
+                
+                
               </div>
+              <p className="p-4">{post.guide[0].bio}</p>
             </div>
           ) : (
             <p>
               <Skeleton width={300} />
             </p>
           )}
+          {post.featured_image ? (
+            <img src={post.featured_image.url}></img>
+          ) : (
+            <Skeleton height={800} width={600} />
+          )}
           {post.body ? (
-            <div {...(post.$?.body as {})}>{parse(post.body)}</div>
+            <div className="container-trip" {...(post.$?.body as {})}>{parse(post.body)}</div>
           ) : (
             <Skeleton height={800} width={600} />
           )}
