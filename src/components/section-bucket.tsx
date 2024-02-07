@@ -11,7 +11,7 @@ export default function SectionBucket({ section }: { section: BucketProps }) {
           <h2 {...(section.$?.title_h2 as {})}>{section.title_h2}</h2>
         )}
         {section.description && (
-          <p {...(section.$?.description as {})}>{section.description}</p>
+          <p className="text-xl" {...(section.$?.description as {})}>{section.description}</p>
         )}
       </div>
       <div className="member-section">
