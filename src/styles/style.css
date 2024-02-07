@@ -219,6 +219,16 @@ footer a {
   padding-left: 1em;
 }
 
+.rating-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 5rem;
+}
+.rating{
+  font-size: 4rem;
+}
+
 /* button area in contact form */
 
 .btn {
@@ -376,6 +386,7 @@ footer a {
   letter-spacing: 0.3px;
   margin-bottom: 40px;
   color: #ffffff;
+  margin-top: 4rem;
 }
 
 .blogpost-readmore {

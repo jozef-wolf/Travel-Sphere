@@ -65,5 +65,6 @@ export type Post = {
     body:string;
     related_post:[Blog];
     featured_image: any;
+    custom: any;
     $:Object;
   }

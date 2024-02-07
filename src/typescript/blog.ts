@@ -47,6 +47,7 @@ export type BloglistProps = {
     featured_image: Image; 
     title: string;
     guide: [Guide];
+    custom: any;
   }
 
 export type FeaturedBlogProps = {
