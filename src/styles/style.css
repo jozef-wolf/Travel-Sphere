@@ -695,7 +695,15 @@ width: 35rem;
 .contact-page-form {
   width: 50%;
 }
-
+.contact-title {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+.contact-text  p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .contact-page-content > h2 {
   font-weight: bold;
   font-size: 44px;

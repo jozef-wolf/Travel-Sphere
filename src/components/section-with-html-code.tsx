@@ -8,8 +8,8 @@ export default function SectionWithHtmlCode({ embedObject }: {embedObject : Obje
     return (
       <div className='contact-page-section max-width'>
         <div className='contact-page-content'>
-          {embedObject.title && <h1 {...embedObject.$?.title as {}}>{embedObject.title}</h1>}
-          <div {...embedObject.$?.description as {}}>{embedObject.description && parse(embedObject.description)}</div>
+          {embedObject.title && <div className='contact-title' {...embedObject.$?.title as {}}>{embedObject.title}</div>}
+          <div className='contact-text' {...embedObject.$?.description as {}}>{embedObject.description && parse(embedObject.description)}</div>
         </div>
         <div className='contact-page-form' {...embedObject.$?.html_code as {}}>
           {embedObject.html_code && parse(embedObject.html_code)}
