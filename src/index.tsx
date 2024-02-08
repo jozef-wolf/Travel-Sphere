@@ -4,10 +4,22 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { LivePreviewProvider } from "./context/live-preview-context-provider";
 import reportWebVitals from "./reportWebVitals";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+ 
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+ 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+ 
+  return null;
+}
 ReactDOM.render(
   <BrowserRouter>
     <LivePreviewProvider>
+      <ScrollToTop/>
       <App />
     </LivePreviewProvider>
   </BrowserRouter>,
